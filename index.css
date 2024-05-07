@@ -3,7 +3,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 text-decoration: none;
-font-family: Arial, Helvetica, sans-serif;
+font-family:sans-serif;
 
 }
 
@@ -36,6 +36,7 @@ position: relative;
 .caja__trasera{
 width: 100%;
 padding: 10px 20px;
+margin-bottom: -50px;
 display: flex;
 justify-content: center;
 backdrop-filter: blur(10px);
@@ -71,10 +72,11 @@ transition: all 300ms;
 
 .caja__trasera button:hover{
 background: white;
-color: aqua;
+color: rgb(0, 42, 255);
 
 }
 /*formularios*/
+
 .Contenedor_Login_Register{
 display: flex;
 align-items: center;
@@ -83,20 +85,19 @@ max-width: 380px;
 position: relative;
 top: -185px;
 left: 10px;
-
 }
 
 .Contenedor_Login_Register form{
 width: 100%;
 padding: 80px 20px;
-background: rgb(229, 227, 227);
+background: rgb(255, 255, 255);
 position:absolute;
 border-radius: 20px;
 }
 
 
 .Contenedor_Login_Register form h2{
-font-size: 38px;
+font-size: 30px;
 text-align: center;
 margin-bottom: 20px;
 color: rgb(0, 123, 255);
@@ -112,13 +113,10 @@ font-size: 16px;
 outline: none;
 }
 
-
-
-
-
 .Contenedor_Login_Register form button{
 padding: 10px 40px;
 margin-top: 40px;
+
 border: none;
 font-size: 14px;
 background: rgb(0, 123, 255);
@@ -134,62 +132,52 @@ display: block;
 
 .formulario__Registro{
 display: none;
-
-
-
-
-
-
 }
 
+/*responsive*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Camara{
-
+@media screen and (max-width: 850px) {
     
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
 }
 
-.Capturas{
+/*formularios*/
 
-
+.Contenedor_Login_Register{
+    top: -340px;
+    left: -200px;
+    margin: auto;
 }
 
-.Descargas{
-
+.Contenedor_Login_Register form{
+    position: relative;
 }
 
 
-.whatsapp{
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
