@@ -1,0 +1,51 @@
+body{
+    background-image: url(./imgs/fondo\ carros.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body{
+background-color: rgb(201, 246, 192);
+}
+
+.caja {
+
+border: solid 10px;
+margin-top: 50px;
+
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+
+
+}
+
+.galeria img{
+   
+
+    width: 30%;
+    height: 40vh;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
