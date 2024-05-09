@@ -32,3 +32,36 @@ function register() {
     caja__traseraRegistrar.style.opacity ="0";
     caja__traseraLogin.style.opacity = "1";
 }
+const nombre = document.getElementById ("NombreC");
+
+const correo = document.getElementById ("CorreoE") ;
+
+const usuario = document.getElementById("Usuario1")
+
+const contraseña = document.getElementById("Contraseña1")
+
+
+function datos(){ 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+localStorage.setItem("nombre",nombre.value)
+
+localStorage.setItem("usuario",usuario.value)
+
+localStorage.setItem("correo",correo.value)
+
+localStorage.setItem("contra",contraseña.value)
+
+}
