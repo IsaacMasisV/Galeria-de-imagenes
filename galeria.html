@@ -4,69 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./galeria.css">
 </head>
-<link rel="stylesheet" href="./galeria.css">
 <body>
     
-<h1><samp>Galeria Isaac</samp></h1>
+    <h1>Galeria Isaac</h1>
 
-<section class="caja">
+    <div class="fullimg" id="fullimgbox">
+        <img src="./imgs/LEGO-senna.jpg" id="fullimg" alt="">
+        <span onclick="closeImg()">x</span>
+    </div>
+        
     <div class="galeria">
         
+         <img src="./imgs/LEGO-senna.jpg" onclick="openfullimg(this.src)" alt="">
+            
+         <img src="./imgs/hellcat.jpg" onclick="openfullimg(this.src)" alt="">
+   
+         <img src="./imgs/ferrariF1.jpg" onclick="openfullimg(this.src)" alt="">
         
-        <div class="fotos1">
-            
-            <img src="./imgs/LEGO-senna.jpg" alt="">
-            
-            <img src="./imgs/hellcat.jpg" alt="">
-            
-            <img src="./imgs/ferrariF1.jpg" alt="">
-            
-        </div>
-
-        <div class="fotos2">
-
-            <img src="./imgs/corvette.jpg" alt="">
-            
-            <img src="./imgs/camaro.jpg" alt="">
-            
-            <img src="./imgs/bentley-continental.jpg" alt="">
-
-
-        </div>
-            
-        
-        <div class="fotos3">
-            
-            <img src="./imgs/bentley-continental-gt3.jpg" alt="">
-                   
-            <img src="./imgs/vocho.jpg" alt="">
-            
-            <img src="./imgs/bmw-i8.jpg" alt="">
-            
-        </div>
-
-        
+         <img src="./imgs/Chevrolet-CorvetteZ06.jpg" onclick="openfullimg(this.src)" alt="">
        
+         <img src="./imgs/camaro.jpg" onclick="openfullimg(this.src)" alt="">
+            
+         <img src="./imgs/bentley-continental.jpg" onclick="openfullimg(this.src)" alt="">
+  
+         <img src="./imgs/bentley-continental-gt3.jpg" onclick="openfullimg(this.src)" alt="">
+         
+         <img src="./imgs/bmw-i8.jpg" onclick="openfullimg(this.src)" alt="">
+       
+
     </div>
 
-
-        
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="./galeria.js"></script>
 </body>
 </html>
