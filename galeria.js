@@ -9,3 +9,6 @@ function openfullimg(refarance){
 function closeImg(){
     fullimgbox.style.display = "none";
 }
+
+
+

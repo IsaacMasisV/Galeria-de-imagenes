@@ -32,16 +32,6 @@ function register() {
     caja__traseraRegistrar.style.opacity ="0";
     caja__traseraLogin.style.opacity = "1";
 }
-const nombre = document.getElementById ("NombreC");
-
-const correo = document.getElementById ("CorreoE") ;
-
-const usuario = document.getElementById("Usuario1")
-
-const contraseña = document.getElementById("Contraseña1")
-
-
-function datos(){ 
 
 
 
@@ -51,17 +41,46 @@ function datos(){
 
 
 
+const Registrojs = document.querySelector('#Registrojs')
+Registrojs.addEventListener('submit', (e) =>{
+    e.preventDefault()
+
+    const NombreC = document.querySelector('#NombreC').value;
+    const CorreoE = document.querySelector('#CorreoE').value;
+    const Usuario1 = document.querySelector('#Usuario1').value;
+    const Contraseña1 = document.querySelector('#Contraseña1').value;
 
 
-
+    const Users = JSON.parse(localStorage.getItem('users')) || []
     
+    // const SiElUsuarioEstaR = Users.find(user => user.CorreoE === CorreoE);
+    // if (SiElUsuarioEstaR) {
+    //     return alert('El usuario ya esa registrado');
+    // }
+    
+    Users.push({NombreC: NombreC, CorreoE: CorreoE, Usuario1: Usuario1, Contraseña1: Contraseña1});
 
-localStorage.setItem("nombre",nombre.value)
+    localStorage.setItem('users', JSON.stringify(Users));
+    alert('Se registro el usuario con exito');
+    window.location.href =='Loginjs';
+});
 
-localStorage.setItem("usuario",usuario.value)
 
-localStorage.setItem("correo",correo.value)
 
-localStorage.setItem("contra",contraseña.value)
+const Loginjs = document.querySelector('#Loginjs')      
+Loginjs.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const CorreoE = document.querySelector ('#CorreoE').value;
+    const Contraseña1 = document.querySelector ('#Contraseña1').value;
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    
+    const UsuarioValido = Users.find(user => user.CorreoE === CorreoE && user.Contraseña1 === Contraseña1);
+    if (!UsuarioValido) {
+        return alert('El correo o la contraseña no son validos!');
+    };
+    
+    alert (`Bienvenido ${UsuarioValido.Usuario1}`);
 
-}
+    window.location.href = 'galeria.html';
+    
+});
